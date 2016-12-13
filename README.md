@@ -1,6 +1,6 @@
 # Yii2 Mailgun mailer
 
-[![Latest version](https://poser.pugx.org/understeam/yii2-mailgun/version)](https://packagist.org/packages/unsersteam/yii2-mailgun)
+[![Latest version](https://poser.pugx.org/understeam/yii2-mailgun/version)](https://packagist.org/packages/understeam/yii2-mailgun)
 
 Install through Composer:
 
