@@ -45,6 +45,8 @@ class Message extends BaseMessage
     public function setCharset($charset)
     {
         $this->_charset = $charset;
+        
+        return $this;
     }
 
     /**
@@ -61,6 +63,8 @@ class Message extends BaseMessage
     public function setFrom($from)
     {
         $this->_from = $from;
+        
+        return $this;
     }
 
     /**
@@ -77,6 +81,8 @@ class Message extends BaseMessage
     public function setTo($to)
     {
         $this->_to = $to;
+        
+        return $this;
     }
 
     /**
@@ -93,6 +99,8 @@ class Message extends BaseMessage
     public function setReplyTo($replyTo)
     {
         $this->_replyTo = $replyTo;
+        
+        return $this;
     }
 
     /**
@@ -109,6 +117,8 @@ class Message extends BaseMessage
     public function setCc($cc)
     {
         $this->_cc = $cc;
+        
+        return $this;
     }
 
     /**
@@ -125,6 +135,8 @@ class Message extends BaseMessage
     public function setBcc($bcc)
     {
         $this->_bcc = $bcc;
+        
+        return $this;
     }
 
     /**
@@ -141,6 +153,8 @@ class Message extends BaseMessage
     public function setSubject($subject)
     {
         $this->_subject = $subject;
+        
+        return $this;
     }
 
     /**
@@ -149,6 +163,8 @@ class Message extends BaseMessage
     public function setTextBody($text)
     {
         $this->_text = $text;
+        
+        return $this;
     }
 
     public function getTextBody()
@@ -162,6 +178,8 @@ class Message extends BaseMessage
     public function setHtmlBody($html)
     {
         $this->_html = $html;
+        
+        return $this;
     }
 
     public function getHtmlBody()
@@ -175,6 +193,8 @@ class Message extends BaseMessage
     public function attach($fileName, array $options = [])
     {
         $this->_attachments[] = ['filename' => $fileName, 'options' => $options];
+        
+        return $this;
     }
 
     /**
@@ -183,6 +203,8 @@ class Message extends BaseMessage
     public function attachContent($content, array $options = [])
     {
         $this->_attachments[] = ['content' => $content, 'options' => $options];
+        
+        return $this;
     }
 
     /**
