@@ -71,7 +71,7 @@ class Mailer extends BaseMailer
      */
     protected function sendMessage($message)
     {
-        $request = $this->httpclient->post($this->getUrl(), [
+        $data = [
             'from' => $this->normalizeAddress($message->getFrom()),
             'to' => $this->normalizeAddress($message->getTo()),
             'cc' => $this->normalizeAddress($message->getCc()),
@@ -80,7 +80,11 @@ class Mailer extends BaseMailer
             'text' => $message->getTextBody(),
             'html' => $message->getHtmlBody(),
             // TODO: Attachments
-        ], [
+        ];
+        if ($replyTo = $message->getReplyTo()) {
+            $data['h:Reply-To'] = $this->normalizeAddress($replyTo);
+        }
+        $request = $this->httpclient->post($this->getUrl(), $data, [
             'Authorization' => 'Basic ' . base64_encode('api:' . $this->apiKey),
             // TODO: 'Content-Type' => 'multipart/form-data',
         ]);
