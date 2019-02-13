@@ -2,7 +2,7 @@
     "name": "understeam/yii2-mailgun",
     "description": "Lightweight Mailgun library for Yii2 framework",
     "type": "library",
-    "license": "GPLv3",
+    "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
         {
